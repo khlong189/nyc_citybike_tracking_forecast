@@ -76,9 +76,9 @@ These findings played a **critical role in informing the subsequent data modelin
 **Link to Code**: [EDA File](https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/final_project/02%20eda.py)
 
 ### Buidling ML Model and Registry
-After performing the necessary data storage and preprocessing, the next step involved building the forecasting model. In this project, we utilized the popular FB-Prophet model, which took into account the monthly, daily, and hourly seasonality patterns identified during the exploratory data analysis (EDA). Holiday effects were also incorporated into the Prophet model. To track and manage the model artifacts, parameters, and metrics, we leveraged Databrick's MLflow Tracking. This allowed us to compare different models, select the best one, and easily reuse the chosen model. Additionally, MLflow Registry facilitated the smooth transition of the best model from staging to production, ensuring that the model could be continually used based on new incoming data. Although there was options of adding different version of our model into the ML Model Registry and use only the model giving best peformance. But FB-Prophet in this case was giving much better performance than other and therefore the our model registry contained only the prophet model version which was transitioned into stage and used thereafter.
+After performing the necessary data storage and preprocessing, the next step involved building the forecasting model. In this project, we utilized Prophet model, which took into account the monthly, daily, and hourly seasonality patterns identified during exploratory data analysis (EDA), including holiday effects. To manage model artifacts, parameters, and metrics effectively, Databricks' MLflow Tracking was utilized. This facilitated model comparison, selection, and reuse based on performance metrics. The MLflow Registry enabled smooth transition of the selected Prophet model from staging to production, ensuring continuous use with new data.
 
-**Link to Code**: [ML Model File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/03%20mdl.py>)
+**Link to Code**: [ML Model File](<https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/final_project/03%20mdl.py>)
 
 ### Application and Real Time Model Updation
 In the final phase of our project, we focused on monitoring the performance of the forecasting model as new data arrived every 30 minutes. To accomplish this, we utilized the gold tables to track the live performance of the model. This allowed us to promptly take action if the model's performance fell below a predefined threshold and update the model accordingly.
@@ -89,10 +89,10 @@ To compare the performance of the staging and production models, we examined the
 
 The following image depicts the forecast that was made to understand demand at a particular station
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/forecast_1.png" width="600" height="150"/>
+<img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/res.png" width="600" height="150"/>
 </p>
 
-**Link to Code**: [Application Monitoring File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/04%20app.py>)
+**Link to Code**: [Application Monitoring File](<https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/final_project/04%20app.py>)
 
 
 ## Conclusion
