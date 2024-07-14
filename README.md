@@ -2,7 +2,7 @@
 <img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/citybike.png" alt="Databricks and Citibike Image"/>
 </div>
 
-## Building an end to end machine learning pipeline that can predict the hourly demand of NY Citi-Bikes at a particular station
+## Building an end-to-end ML pipeline that can predict the hourly demand of NY Citi-Bikes at a particular station
 
 <hr>
 
@@ -21,10 +21,10 @@
 <hr>
 
 ## Introduction
-Implemented in New York City, Citi Bikes have become a popular bike-sharing system, providing convenient transportation for residents and tourists alike. With millions of daily customers using Citi Bikes for various purposes such as commuting, shopping, and leisure, the system has over 1500+ stations across New York and Jersey City. Ensuring an adequate supply of bikes at each station can be challenging, but data science plays a crucial role in addressing this issue. By employing an end-to-end machine learning pipeline, the usage of bikes can be tracked, and hourly predictions of bike rides can be made. This enables the business to better understand demand patterns, timely replenish bikes at the docks, and manage the distribution of bikes across different stations. Ultimately, this data-driven approach enhances operational efficiency, resulting in increased ride availability and satisfied customers.
+Implemented in NYC, Citi Bikes have become a popular bike-sharing system, providing convenient transportation for residents and tourists alike. With millions of daily customers using Citi Bikes for various purposes such as commuting, shopping, and leisure, the system has over 1500+ stations across New York and Jersey City. Ensuring an adequate supply of bikes at each station can be challenging, but data science plays a crucial role in addressing this issue. By employing an end-to-end machine learning pipeline, the usage of bikes can be tracked, and hourly predictions of bike rides can be made. This enables the business to better understand demand patterns, timely replenish bikes at the docks, and manage the distribution of bikes across different stations. Ultimately, this data-driven approach enhances operational efficiency, resulting in increased ride availability and satisfied customers.
 
 ## Software Platform
-To address the data-intensive nature of the problem and optimize processing speed, the entire application was developed using the **Databricks** platform. **Python** and **Pyspark SQL** were the primary programming languages utilized for coding purposes.
+To address the data-intensive nature of the problem and optimize processing speed, the entire application was developed using the **Databricks** platform. **Python** and **Pyspark SQL** were the primary programming languages utilized for coding purposes. 
 
 ## Methodology
 To efficiently handle the large volume of data and deliver timely insights, a well-structured pipeline was designed. The project plan was divided into four key sections:<br>
@@ -87,7 +87,7 @@ The implementation involved loading both the production and staging models, whic
 
 To compare the performance of the staging and production models, we examined the residuals data until the ground truth data was available. Based on the residuals plot, the code was designed to promote the staging model to production when deemed appropriate.
 
-The following image depicts the forecast that was made to understand demand at a particular station
+The following image depicts the forecast that was made to understand demand at a particular station.
 <p align="center">
 <img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/res.png" width="600" height="150"/>
 </p>
