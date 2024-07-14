@@ -44,7 +44,7 @@ To achieve this, separate table structures and relations were created for the hi
 
 This carefully designed architecture ensured a robust and efficient data pipeline, facilitating the extraction, transformation, and loading of data for analysis and modeling purposes.
 
-**Link to Code**: [ETL File](<[https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/01%20etl.py]>)
+**Link to Code**: [ETL File](<[[https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/01%20etl.py]](https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/final_project/01%20etl.py)>)
 
 ### Performing EDA
 Exploratory data analysis (EDA) played a pivotal role in this study as it provided valuable insights into the usage patterns and operational demand of Citi Bikes. Key findings from the analysis include:
