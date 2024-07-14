@@ -1,5 +1,5 @@
 <div align="center">
-<img src="[yc_citybike_tracking_forecast/blob/main/img/citybike.png)](https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/citybike.png)" alt="Databricks and Citibike Image"/>
+<img src="[yc_citybike_tracking_forecast/blob/main/img/citybike.png)]" alt="Databricks and Citibike Image"/>
 </div>
 
 ## Building an end to end machine learning pipeline that can predict the hourly demand of NY Citi-Bikes at a particular station
