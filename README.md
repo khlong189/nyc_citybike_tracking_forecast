@@ -57,33 +57,23 @@ Exploratory data analysis (EDA) played a pivotal role in this study as it provid
   
 + Weekend Effect: There was a noticeable decrease in ride counts during weekends, suggesting a shift in user behavior. Factors such as visibility, cloud cover, and rain emerged as significant contributors to this trend.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/weekend-effect.png" width="500" height="200"/>
+<img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/weekend.png" width="500" height="200"/>
 </p>
 
 + Hourly Patterns: Ride counts exhibited distinct patterns based on the hour of the day. Increased ride activity was observed during early morning and evening hours, corresponding to office commute times. This finding indicated a substantial user base consisting of daily office goers.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/hourofday-effect.png" width="500" height="200"/>
+<img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/hourly.png" width="500" height="200"/>
 </p>
 
 + Holiday Impact: Holidays had a notable impact on ride counts, with a decline observed during these periods. In the are plot below, significant dips in bike usage were observed on specific dates, including Thanksgiving (Nov 25, 2021), Christmas Day (Dec 25, 2021), a snowstorm (Jan 29, 2022), President's Day (Feb 21, 2022), Easter (Apr 17), and Independence Day (Jul 4). These events and holidays contributed to reduced bike activity, indicating the influence of such occasions on Citi Bikes' usage.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/holiday-effect.png" width="400px" height="200px"/>
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/monthly-effect.png" width="400px" height="200px"/>
-</p>
-
-+ Temperature Influence: While not a dominant factor, a significant rise in temperature was found to reduce ride counts. This observation underscores the sensitivity of ridership to changes in weather conditions.
-<p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/temp-effect.png" width="500" height="200"/>
-</p>
-
-+ Cloud/Visibility Effect: The graph clearly illustrates that snowy and rainy weather conditions resulted in a significant decrease in the number of rides, while riders continued to use the service during cloudy and clear sky conditions.
-<p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/cloudvisibility-effect.png" width="500" height="200"/>
+<img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/holiday.png" width="400px" height="200px"/>
+<img src="https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/img/monthly_effect.png" width="400px" height="200px"/>
 </p>
 
 These findings played a **critical role in informing the subsequent data modeling** process, enabling the development of models tailored to improve prediction accuracy.
 
-**Link to Code**: [EDA File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/02%20eda.py>)
+**Link to Code**: [EDA File](https://github.com/khlong189/nyc_citybike_tracking_forecast/blob/main/final_project/02%20eda.py)
 
 ### Buidling ML Model and Registry
 After performing the necessary data storage and preprocessing, the next step involved building the forecasting model. In this project, we utilized the popular FB-Prophet model, which took into account the monthly, daily, and hourly seasonality patterns identified during the exploratory data analysis (EDA). Holiday effects were also incorporated into the Prophet model. To track and manage the model artifacts, parameters, and metrics, we leveraged Databrick's MLflow Tracking. This allowed us to compare different models, select the best one, and easily reuse the chosen model. Additionally, MLflow Registry facilitated the smooth transition of the best model from staging to production, ensuring that the model could be continually used based on new incoming data. Although there was options of adding different version of our model into the ML Model Registry and use only the model giving best peformance. But FB-Prophet in this case was giving much better performance than other and therefore the our model registry contained only the prophet model version which was transitioned into stage and used thereafter.
